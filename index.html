@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <title>Title</title>
+    </head>
+    <body>
+        <div class="container"> <!-- style="filter:blur(5px);" -->   
+            <div class="calendar_title_container">
+
+                <div id="year_season">2025 Winter</div>
+                <!--
+                <button class="today_btn">
+                    Today
+                </button>
+                --> 
+            </div>
+            <div class="calendar_body">
+                <div class="calendar">
+                    <div class="weekdays_container">
+                        <div class="week_space">
+                            <div>Week</div>
+                        </div>
+                        <div class="weekdays">Mon</div>
+                        <div class="weekdays">Tue</div>
+                        <div class="weekdays">Wed</div>
+                        <div class="weekdays">Thu</div>
+                        <div class="weekdays">Fri</div>
+                        <div class="weekdays">Sat</div>
+                        <div class="weekdays">Sun</div>
+                    </div>
+                    <div class="days_container">
+                        <!-- implemented by js -->                       
+                    </div>
+
+                </div>
+                <div class="information">
+                    <div class="task_container">
+                        <div class="task_header">
+                            <i class="fa-regular fa-square-check"></i>&nbsp;Tasks
+                        </div>
+                        <div class="task_body">
+                            <!-- implemented by js -->  
+                        </div>
+                    
+                    </div>
+
+                    <div class="today_todo_container">
+                        <div class="today_todo_header">
+                            <!-- implemented by js -->  
+                        </div>
+                        <div class="today_todo_body_container">
+                            <div class="today_todo_body">
+                                <div class="today_todo_body_icon">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="today_todo_body_data">
+                                    <div class="today_todo_body_name">This is a test</div>
+                                    <div class="today_todo_body_time">23:30 ~ 23:59</div>
+                                </div>
+
+                            </div>
+
+                            <div class="today_todo_body">
+                                <div class="today_todo_body_icon">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="today_todo_body_data">
+                                    <div class="today_todo_body_name">ggggggyyy</div>
+                                    <div class="today_todo_body_time">afternoon</div>
+                                </div>
+
+                            </div>
+
+                            <div class="today_todo_body">
+                                <div class="today_todo_body_icon">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="today_todo_body_data">
+                                    <div class="today_todo_body_name">This is a test</div>
+                                    <div class="today_todo_body_time">23:30 ~ 23:59</div>
+                                </div>
+
+                            </div>
+
+                            <div class="today_todo_body">
+                                <div class="today_todo_body_icon">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="today_todo_body_data">
+                                    <div class="today_todo_body_name">This is a test</div>
+                                    <div class="today_todo_body_time">23:30 ~ 23:59</div>
+                                </div>
+
+                            </div>
+
+                            <div class="today_todo_body">
+                                <div class="today_todo_body_icon">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="today_todo_body_data">
+                                    <div class="today_todo_body_name">This is a test</div>
+                                    <div class="today_todo_body_time">23:30 ~ 23:59</div>
+                                </div>
+
+                            </div>
+
+                            <div class="today_todo_body">
+                                <div class="today_todo_body_icon">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="today_todo_body_data">
+                                    <div class="today_todo_body_name">This is a test</div>
+                                    <div class="today_todo_body_time">23:30 ~ 23:59</div>
+                                </div>
+
+                            </div>
+
+                            <div class="today_todo_body">
+                                <div class="today_todo_body_icon">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="today_todo_body_data">
+                                    <div class="today_todo_body_name">This is a test</div>
+                                    <div class="today_todo_body_time">23:30 ~ 23:59</div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                
+                    </div>
+
+                    <div id="add_event_wrapper" class="add_event_wrapper">
+                        <div class="add_event_header_container">
+                            <div id="add_event_title" class="add_event_title">
+                                <!-- implemented by js -->  
+                            </div>
+                        </div>
+                        <div class="add_event_body_container">
+                            <div class="add_event_body">
+                                <div class="add_event_body_icon">
+                                    <i class="fa-solid fa-plus add_event_icons"></i>
+                                </div>
+                                <div class="add_event_body_input">
+                                    <input type="text" placeholder="Event name" id="add_event_name"/>
+                                </div>
+                            </div>
+                            <div class="add_event_body">
+                                <div class="add_event_body_icon">
+                                    <i class="fa-regular fa-clock add_event_icons"></i>
+                                </div>
+                                <div class="add_event_body_input_time">
+                                    <input type="text" maxlength="2" id="add_event_start_time_h"/>
+                                </div>
+                                <div class="add_event_colon">:</div>
+                                <div class="add_event_body_input_time">
+                                    <input type="text" maxlength="2" id="add_event_start_time_m"/>
+                                </div>
+                                <div class="add_event_tilde">~</div>
+                                <div class="add_event_body_input_time">
+                                    <input type="text" maxlength="2" id="add_event_end_time_h"/>
+                                </div>
+                                <div class="add_event_colon">:</div>
+                                <div class="add_event_body_input_time">
+                                    <input type="text" maxlength="2" id="add_event_end_time_m"/>
+                                </div>
+                                <div class="add_event_body_input_timerange">
+                                    <div class="timerange_icon_container" tabindex="0">
+                                        <i class="fa-solid fa-sunrise"></i>
+                                    </div>
+                                    <div class="timerange_icon_container" tabindex="0">
+                                        <i class="fa-solid fa-sunset"></i>
+                                    </div>
+                                    <div class="timerange_icon_container" tabindex="0">
+                                        <i class="fa-solid fa-moon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add_event_body_tag">
+                                <div class="add_event_body_icon">
+                                    <i class="fa-regular fa-tag add_event_icons"></i>
+                                </div>
+                                <div class="add_event_body_input">
+                                    <div class="add_event_body_input_tag_text">
+                                        <input type="text"  id="add_event_tag" placeholder="Select a tag..." disabled="True"/>
+                                    </div>
+                                    <div class="add_event_body_input_tag_icon">
+                                        <div class="input_tag_icon_container tag_clr_0" tabindex="0">
+                                            <i class="fa-solid fa-tag fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>
+                                        </div>
+                                        <div class="input_tag_icon_container tag_clr_1" tabindex="0">
+                                            <i class="fa-solid fa-tag fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>
+                                        </div>
+                                        <div class="input_tag_icon_container tag_clr_2" tabindex="0">
+                                            <i class="fa-solid fa-tag fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>
+                                        </div>
+                                        <div class="input_tag_icon_container tag_clr_3" tabindex="0">
+                                            <i class="fa-solid fa-tag fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>
+                                        </div>
+                                        <div class="input_tag_icon_container tag_clr_4" tabindex="0">
+                                            <i class="fa-solid fa-tag fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>
+                                        </div>
+                                        <div class="input_tag_icon_container tag_clr_5" tabindex="0">
+                                            <i class="fa-solid fa-tag fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add_event_body">
+                                <div class="add_event_body_icon">
+                                    <i class="fa-solid fa-align-left add_event_icons"></i>
+                                </div>
+                                <div class="add_event_body_input">
+                                    <input type="text" placeholder="Event details" id="add_event_details"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="add_event_footer_container">
+                            <div class="add_event_close_btn">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div class="add_event_confirm_btn">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="warning_container">
+            <div class="warning_header">
+
+                <i class="fa-regular fa-triangle-exclamation"></i>
+
+            </div>
+            <div class="warning_body">
+                Oops... Please check the input data
+            </div>
+            <div class="warning_footer">
+                <button class="warning_btn">
+                    Dismiss
+                </button>
+            </div>
+        </div>
+        <div class="event_inspect">
+            <div class="event_inspect_header">
+                <div class="event_inspect_delete_btn_container">
+                    <i class="fa-regular fa-trash-can event_inspect_delete_btn"></i>
+                </div>
+
+                <div class="event_inspect_close_btn_container">
+                    <i class="fa-solid fa-xmark event_inspect_close_btn"></i>
+                </div>
+
+            </div>
+            <div class="event_inspect_body">
+                <div class="event_inspect_main">
+                    <div class="event_inspect_main_icon"> <!-- implemented by js --> </div>
+                    <div class="event_inspect_main_data">
+                        <div class="event_inspect_name"></div>
+                        <div class="event_inspect_time"></div>
+                    </div>
+                </div>
+                <div class="event_inspect_detail">
+                    <div class="event_inspect_detail_icon"><i class="fa-solid fa-chart-simple-horizontal"></i></div>
+                    <div class="event_inspect_detail_data"></div>
+                </div>
+            </div>
+            <div class="event_inspect_footer">
+                <div class="event_inspect_done">Mark as done</div>
+                <div class="event_inspect_delete_confirm">Click to delete</div>
+            </div>
+
+        </div>
+        <script type="module" src="script.js"></script>
+
+    </body>
+    
+</html>
