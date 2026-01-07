@@ -1,5 +1,5 @@
 close all;
-clear;123
+clear;123456
 
 R0 = 20*1000; % slant range of closest approach (m)
 Vr = 150;     % effective radar velocity (m/s)
